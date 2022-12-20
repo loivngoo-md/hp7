@@ -7,7 +7,7 @@ export class Withdraw extends EntityHelper {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('integer')
+  @Column('integer', {nullable: true})
   user_id: number;
 
   @Column('varchar')
@@ -19,7 +19,7 @@ export class Withdraw extends EntityHelper {
   @Column('float8', { default: 0 })
   fee_rate: number;
 
-  @Column('float8')
+  @Column('float8', {nullable: true})
   actual_amount: number;
 
   @Column('varchar', { default: DEPOSIT_WITHDRAWAL_STATUS.PENDING })

@@ -17,10 +17,10 @@ class Deposit extends EntityHelper {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('integer')
+  @Column('integer', { nullable: true })
   user_id: number;
 
-  @Column('varchar')
+  @Column('varchar', { nullable: true })
   username: string;
 
   @Column('float8')

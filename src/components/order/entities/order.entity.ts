@@ -16,16 +16,16 @@ export class Order extends EntityHelper {
   @Column('integer')
   quantity: number;
 
-  @Column('float8')
+  @Column('float8', {nullable: true})
   price: number;
 
-  @Column('float8')
+  @Column('float8', {nullable: true})
   fee_rate: number;
 
   @Column('float8')
   amount: number;
 
-  @Column('float8')
+  @Column('float8', {nullable: true})
   actual_amount: number;
 
   @Column('integer')
